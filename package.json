@@ -1,0 +1,15 @@
+{
+  "name": "todo-major-1",
+  "version": "1.0.0",
+  "description": "ToDo List API with deadlines & various features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niman Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
