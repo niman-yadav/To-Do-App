@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-
+//created schema 
 var toDO_schema = new mongoose.Schema({
     desc :{
         type: String,
@@ -17,6 +17,6 @@ var toDO_schema = new mongoose.Schema({
     },
     
 });
-
+//Exported model
 const Todo_model = mongoose.model('Todo_model' , toDO_schema);
 module.exports = Todo_model;

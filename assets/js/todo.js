@@ -1,3 +1,3 @@
+// changed the date picker format using jquery ui
+
 $('#dinput').datepicker({ dateFormat: 'D, dd-mm-yy' });
-console.log('Hii Iam here');
-$('#completed').add

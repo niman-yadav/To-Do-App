@@ -6,16 +6,16 @@ body{
 body::-webkit-scrollbar {
     display: none;
 }
+/*-----------heading-------------*/
 h1{
     text-align: center;
     font-size: 50px;
     color: #000000;
     font-family: cursive;
 }
-.headings{
-    text-align: center;
 
-}
+
+/****************************** create task form***************************/
 #create-task{
     display: inline-block;
     width: 30%;
@@ -24,23 +24,14 @@ h1{
     border-radius: 8px;
 }
 
-#delete-task{
-    display: inline-block;
-    width: 65%;
-    padding: 10px;
-    border-radius: 8px;
-    vertical-align: top;
-    
-}
+/* ----------description container----------------*/
 #desc{
     display: flex;
     flex-direction: column;
     text-align: center;
-   
     font-size: 26px;
-   
 }
-
+/*-----------description text input----------*/
 #desc textarea{
     border: 2px solid black;
     text-align: center;
@@ -52,6 +43,7 @@ h1{
     /* // focus works only with form elements (elements which takes input)*/
     background-color: rgb(226, 222, 222);
 }
+/*----------------category dropdown container------------*/
 #category{
     width: 49%;
     display: inline-flex;
@@ -60,7 +52,7 @@ h1{
    
    
 }
-
+/*---------------category dropdown ------------*/
 #category select{
     padding: 2px;
     font-size: 13px;
@@ -70,7 +62,7 @@ h1{
     font-family: cursive;
 
 }
-
+/*---------------due date container-----------------*/
 #due-date{
     width: 49%;
     display: inline-flex;
@@ -79,7 +71,7 @@ h1{
     
     
 }
-
+/*-----------------deadline datepicker--------------*/
 #due-date input{
     padding: 2px;
     border: none;
@@ -91,26 +83,8 @@ h1{
     font-family: cursive;
 }
 
-.controls{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-#del {
 
-    background-color: #b91212;
-    width: 55px;
-    border-radius: 50%;
-    font-weight: 600;
-    font-family: fangsong;
-}
-#del img{
-    height: 40px;
-    width:40px;
-    padding: 4px;
-    vertical-align: middle;
-}
+/*------------add task button-----------------*/
 #add{
     
     background-color: lavender;
@@ -119,20 +93,34 @@ h1{
     font-family: emoji;
     font-weight: 600;
 }
+/*----------------plus sign image--------------*/
 #add img{
     height: 20px;
     width:20px;
     padding: 4px;
     vertical-align: middle;
 }
+
+/*-************************ delete task form**********************************/
+#delete-task{
+    display: inline-block;
+    width: 65%;
+    padding: 10px;
+    border-radius: 8px;
+    vertical-align: top;
+    
+}
+/*--------------task lists container ----------*/
 #task-list{
     overflow-y: scroll;
     height: 75%;
     
 }
+/*--------------task lists container scroll bar----------*/
 #task-list::-webkit-scrollbar {
     display: none;
 }
+/*-------------individual task container---------*/
 .task{
     display: flex;
     min-height: 70px;
@@ -143,10 +131,7 @@ h1{
     padding-left: 40px;
     padding-bottom: 1px;
 }
-
-.task-label{
-    width: 80%;
-}
+/*-----------task description and category container-------------*/
 .task-desc-cat{
     display: flex;
     flex-direction: row;
@@ -157,25 +142,42 @@ h1{
     margin-top: 4px;
     
 }
-.common-buttons{
-    font-size: 16px;
-    vertical-align: middle;
-    padding: 4px;
-    border: none;
-    margin: 10px;
-    border-radius: 6px;
-   
+/*--------- Task Description text---------*/
+.task-label{
+    width: 80%;
 }
+
+
+/*-----------delete button ---------------*/
+#del {
+
+    background-color: #b91212;
+    width: 55px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-family: fangsong;
+}
+/*-----------delete button image(bin)---------------*/
+#del img{
+    height: 40px;
+    width:40px;
+    padding: 4px;
+    vertical-align: middle;
+}
+
+/*-----------deadline container---------------*/
 .deadline{
     margin-block-start: 0.2%;
     vertical-align: middle;
 
 }
+/*------------calendar image-------------*/
 .deadline img{
     color: grey;
     height: 20px;
     width: 20px;
 }
+/*-----------category value container------------*/
 .cat-span{
     display: inline-flex;
     background-color: red;
@@ -192,14 +194,14 @@ h1{
     align-items: center;
     justify-content: center;
 }
+/*-----------completed task checkbox---------------*/
 #completed:checked + label{
     text-decoration: line-through;
     background-color: #f7d3d3;
 }
-input[type = "checkbox"]{
-    font-size: larger;
-    color: seagreen;
-}
+
+
+/* ---------task category buttons------------- */
 .Work{
     background-color: orange;
 }
@@ -215,6 +217,28 @@ input[type = "checkbox"]{
 .School{
     background-color: seagreen;
 }
+
+/*----------- common classes---------------*/
+.common-buttons{
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 4px;
+    border: none;
+    margin: 10px;
+    border-radius: 6px;
+   
+}
+.headings{
+    text-align: center;
+
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/*************************************media queries ******************************************/
 @media screen and (max-width :1000px){
     
     #add{

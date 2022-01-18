@@ -5,9 +5,9 @@ const mongo = require('mongodb');
 const port = 8000;
 
 const app = express();
-
+//setting up the view engine
 app.set('view engine', 'ejs');
-
+// setting up the views directory
 app.set('views' , './views');
 
 app.use(express.static('assets'));
@@ -17,7 +17,7 @@ const mongoose = require('./config/mongoose.js');
 
 const tasks = require('./models/toDoListSchema');
 
-
+// home page controller
 app.get('/' , function(req , res){
 
     tasks.find({} , function(err , task_list){
@@ -31,7 +31,7 @@ app.get('/' , function(req , res){
         });
     });
 });
-
+// controller for creating the tasks
 app.post('/create-task' , function(req , res){
    
     tasks.create({
@@ -50,13 +50,16 @@ app.post('/create-task' , function(req , res){
     });
 });
 
+// controller for deleting the tasks
 
 app.post('/delete-task/' , function(req , res){
 
     let id = req.body.des;
-    console.log(id);
+    //console.log(id);
+    
     if(typeof(id) === 'string')
     {
+        // deleting the selected id in case of single selection
         tasks.findByIdAndDelete(id , function(err){
             if(err)
             console.log('Error in deleting an entry in database' , err);
@@ -65,6 +68,7 @@ app.post('/delete-task/' , function(req , res){
         });
     }
     else{
+        // deleting the selected ids in case of multiple selection
         for(let i of id)
         {
             tasks.findByIdAndDelete(i , function(err){
