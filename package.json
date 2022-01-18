@@ -4,12 +4,15 @@
   "description": "ToDo List API with deadlines & various features",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "Niman Yadav",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.6"
   }
 }
