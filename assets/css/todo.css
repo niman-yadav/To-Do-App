@@ -1,10 +1,16 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   
+   background-image: url(/images/back-ground.jpg);
     margin: 4%;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 h1{
     text-align: center;
+    font-size: 50px;
+    color: #000000;
+    font-family: cursive;
 }
 .headings{
     text-align: center;
@@ -13,7 +19,7 @@ h1{
 #create-task{
     display: inline-block;
     width: 30%;
-    background-color: royalblue;
+    background-color: #008b8b82;
     padding: 10px;
     border-radius: 8px;
 }
@@ -24,7 +30,7 @@ h1{
     padding: 10px;
     border-radius: 8px;
     vertical-align: top;
-    background-color: lemonchiffon;
+    
 }
 #desc{
     display: flex;
@@ -93,14 +99,15 @@ h1{
 }
 #del {
 
-    background-color: red;
-    width: 18%;
+    background-color: #b91212;
+    width: 55px;
+    border-radius: 50%;
     font-weight: 600;
     font-family: fangsong;
 }
 #del img{
-    height: 20px;
-    width:20px;
+    height: 40px;
+    width:40px;
     padding: 4px;
     vertical-align: middle;
 }
@@ -120,16 +127,19 @@ h1{
 }
 #task-list{
     overflow-y: scroll;
-    height: 90%;
-    scrollbar-face-color: seagreen;
+    height: 75%;
+    
+}
+#task-list::-webkit-scrollbar {
+    display: none;
 }
 .task{
     display: flex;
     min-height: 70px;
     flex-direction: column;
-    background-color: #ed9898e6;
+    background-color: #e8eaf182;
     border-radius: 53px;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.5rem;
     padding-left: 40px;
     padding-bottom: 1px;
 }
@@ -186,6 +196,10 @@ h1{
     text-decoration: line-through;
     background-color: #f7d3d3;
 }
+input[type = "checkbox"]{
+    font-size: larger;
+    color: seagreen;
+}
 .Work{
     background-color: orange;
 }
@@ -202,9 +216,7 @@ h1{
     background-color: seagreen;
 }
 @media screen and (max-width :1000px){
-    #del{
-        width:25%;
-    }
+    
     #add{
         width: 40%;
     }
@@ -216,9 +228,7 @@ h1{
     }
 }
 @media screen and (max-width: 800px) {
-    #del{
-        width:40%;
-    }
+    
     #add{
         width: 55%;
     }
@@ -243,9 +253,7 @@ h1{
     #delete-task{
         width: 96%;
     }
-    #del{
-        width:40%;
-    }
+    
     #add{
         width: 55%;
     }
@@ -263,9 +271,7 @@ h1{
     #delete-task{
         width: 96%;
     }
-    #del{
-        width:45%;
-    }
+    
     #add{
         width: 55%;
     }
