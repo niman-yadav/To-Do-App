@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            TO DO List APP
+        </title>
+        <link rel="stylesheet" href="/css/todo.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+         <!-- css for jquery-ui   datepicker -->
+         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+         <!-- js for jquery-ui   datepicker -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+    </head>
+    
+    <body>
+        <h1>To Do List APP</h1>
+        <form id="create-task" action="/create-task" method="post" >
+            <div id = "desc">
+                
+                <h4 class="headings"> Description</h4>
+            
+                <textarea name="desc" placeholder="What do you need to do?" rows = 4 cols = "10"></textarea>
+
+            </div>
+
+            <div id = "category">
+
+                <h4 class="headings">Category</h4>
+                
+                <select name = "category" id = "cat">
+                    <option disabled selected hidden>-- Choose a Category --</option>
+                    <option value="Personal" data-color="blue">Personal</option>
+                    <option value="Work" data-color="red">Work</option>
+                    <option value="School" data-color="green">School</option>
+                    <option value="Cleaning" data-color="yellow">Cleaning</option>
+                    <option value="Other" data-color="purple">Other</option>
+
+                </select>
+            </div>
+
+            <div id = "due-date">
+
+                <h4 class="headings">Due date</h4>
+
+                <input name = "deadline" type="text" id = "dinput" placeholder="dd-mm-yyyy" required >
+
+            </div>
+
+            <div class = "controls">
+
+                <button type = "submit" id = "add" class="common-buttons">
+                    <img src = "/images/plus-solid.svg">
+                    Add Task
+                </button>
+
+                
+            </div>
+        </form> 
+        <form id="delete-task" action="/delete-task" method="post">
+            <div class = "controls">
+                <button type="submit" id= "del" class="common-buttons">
+                   
+                    <img src = "/images/trash-alt-regular.svg">
+                    Delete Task
+                
+                </button>
+            </div>
+            
+
+            <div id = "task-list">
+                <% for(let i of tasks){%>
+                 <div class="task">
+                    <div class = "task-desc-cat">
+                        <div class="task-label">
+                            <input id = "completed" name = "des" type="checkbox" value="<%= i._id %>">
+                            <label for="des">   
+                                <%= i.desc %>
+                            </label>
+                        </div>
+                              
+        
+                    </div>
+                    <div class="deadline-container">
+                        <div class="deadline">
+                            <img src="/images/calendar-alt-regular.svg">
+                            <span>
+                                <%= i.duedate %>
+                            </span>
+                            
+                            <span class="cat-span common-buttons <%= i.category %>" ><%= i.category %></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                 </div>
+                 
+     
+                 <%}%>
+             </div>
+        </form>
+        
+        
+
+        <script type="text/javascript" src="/js/todo.js">
+            
+        </script>
+    </body>
+</html>
