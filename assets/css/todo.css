@@ -118,6 +118,11 @@ h1{
     padding: 4px;
     vertical-align: middle;
 }
+#task-list{
+    overflow-y: scroll;
+    height: 90%;
+    scrollbar-face-color: seagreen;
+}
 .task{
     display: flex;
     min-height: 70px;
@@ -167,7 +172,7 @@ h1{
     width: 72px;
     height: 10px;
     padding: 10px;
-    margin-left: 58%;
+    margin-left: 50%;
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
@@ -195,4 +200,79 @@ h1{
 }
 .School{
     background-color: seagreen;
+}
+@media screen and (max-width :1000px){
+    #del{
+        width:25%;
+    }
+    #add{
+        width: 40%;
+    }
+    .cat-span{
+        margin-left: 37%;
+    }
+    #delete-task{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 800px) {
+    #del{
+        width:40%;
+    }
+    #add{
+        width: 55%;
+    }
+    #category{
+        width:98%;
+    }
+    #due-date{
+        width: 98%;
+    }
+    .cat-span{
+        margin-left: 4%;
+    }
+    #desc textarea{
+        overflow : hidden;
+    }
+    
+}
+@media screen and (max-width: 550px) {
+    #create-task{
+        width: 96%;
+    }
+    #delete-task{
+        width: 96%;
+    }
+    #del{
+        width:40%;
+    }
+    #add{
+        width: 55%;
+    }
+    #category{
+        width:98%;
+    }
+    #due-date{
+        width: 98%;
+    }
+}
+@media screen and (max-width:392px) {
+    #create-task{
+        width: 96%;
+    }
+    #delete-task{
+        width: 96%;
+    }
+    #del{
+        width:45%;
+    }
+    #add{
+        width: 55%;
+    }
+    #category{
+        width:98%;
+    }
+    #due-date{
+        width: 98%;
+    }
 }
